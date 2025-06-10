@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { TextField, Button, Container, Typography, Box } from '@mui/material';
-import create from "../../services/crud.js";
+import {create} from "../../services/crud.js"
 
 const CadastroUsuario = () => {
     const [formData, setFormData] = useState({
@@ -20,8 +20,8 @@ const CadastroUsuario = () => {
         });
     }
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
+    const handleSubmit = async (e) => {
+        e.preventDefault();
         const createdUser = await create(formData);
         console.log("Usuário criado:", createdUser);
 

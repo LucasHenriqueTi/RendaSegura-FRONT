@@ -21,7 +21,7 @@ const getAll = async () => {
     }
 }
 
-export default {
+export {
     create,
     getAll
 };
